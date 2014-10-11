@@ -10,7 +10,7 @@ def print_help():
           '\n    [help] for this message')
 
 
-if __name__ == '__main__':
+def main():
     case = input('Enter a command or type help and press enter:\n')
     if case == 'help':
         print_help()
@@ -37,3 +37,6 @@ if __name__ == '__main__':
         print('Wrong command...\nExiting')
         print_help()
         exit(1)
+
+if __name__ == '__main__':
+    main()

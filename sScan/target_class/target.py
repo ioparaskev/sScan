@@ -74,6 +74,8 @@ def create_ports_list(ports):
         ports_list = range(min(ports_input), max(ports_input)+1)
     elif ports.replace(',', '').isnumeric():
         ports_list = [int(i) for i in ports.split(',')]
+        ports_list = sorted(ports_list)
+        print(ports_list)
     else:
         raise ValueError
     return ports_list
@@ -114,3 +116,10 @@ def start_scan(target):
         print('  Ip:{}'.format(ip))
         for port in target.ports:
             connect.connect_scan(ip, port)
+
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
